@@ -1,0 +1,26 @@
+<h1>Inventory Items Index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventory_items.each do |food_item| %>
+      <tr>
+        <td><%= food_item.title %></td>
+        <td><%= food_item.description %></td>
+        <td><%= food_item.quantity %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Inventory Item', new_inventory_item_path %>

@@ -1,0 +1,30 @@
+<%= form_for(@inventory_item) do |f| %>
+  <% if @inventory_item.errors.any? %>
+    <div>
+      <h2><%= pluralize(@inventory_item.errors.count, "error") %> prohibited this issue from being saved:</h2>
+      <ul>
+        <% @inventory_item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

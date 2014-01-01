@@ -1,0 +1,13 @@
+<h1><%= @inventory_item.title %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @inventory_item.description %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @inventory_item.quantity %>
+</p>
+
+<%= link_to 'Back', inventory_items_path %>
